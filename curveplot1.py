@@ -23,17 +23,13 @@ sample = 20000
 x = np.arange(sample)
 #y = np.sin(2 * np.pi * f * x / Fs)
 
-#y = np.abs(0>np.sin(200*pi*x/Fs+A))
+sON     =  abs((0>np.sin(200*pi*x/Fs+A)) + (0>np.sin(200*pi*x/Fs+B))  )
+sOFF    =  abs((0<=np.sin(200*pi* x/Fs +A )) + (0<=np.sin(200*pi* x/Fs +B )))
+sSINrec =  abs(np.sin(100*pi* x/Fs ))
+sDECH   =  pp1* (np.arctan(np.tan(100*pi* x/Fs )) + pp2)
 
-#y   =  abs(  (0>np.sin(200*pi*x/Fs+A)) )
-y   =  abs(0>np.sin(200*pi*x/Fs+B)) and abs(0>np.sin(200*pi*x/Fs+B)) 
-#y   =  abs(  (0>np.sin(200*pi*x/Fs+A)) and (0>np.sin(200*pi*x/Fs+B))  )
-
-"""sOFF    =  abs(NOT(0>sin(200*pi* x +A )) or not(0>sin(200*pi* x +B )))
-sSINrec =  abs(sin(100*pi* x ))
-sDECH   =  pp1* (arctan(tan(100*pi* x )) + pp2)
-"""
-#sFormula1 = C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O
+               
+y = C *( sON * sSINrec + sOFF * sDECH ) + O
 
 plt.plot(x, y)
 plt.xlabel('sample(n)')
