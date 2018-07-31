@@ -31,18 +31,20 @@ sample = 20000
 x = np.arange(sample)
 #y = np.sin(2 * np.pi * f * x / Fs)
 
-sON     =  abs((0>np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B)) )
-sOFF    =  abs((0<np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B)) )
+sON     =  abs((0>np.sin(100*pi*x/Fs+A)) * (0>np.sin(100*pi*x/Fs+B)) )
+sOFF    =  abs((0<np.sin(100*pi*x/Fs+A)) * (0>np.sin(100*pi*x/Fs+B)) )
 sSINrec =  abs(np.sin(100*pi* x/Fs ))
 sDECH   =  pp1* (np.arctan(np.tan(100*pi* x/Fs )) + pp2)
 
 # sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"        
-y            =  C*                  sSINrec + O
-y1           =  C*(    sON     *    sSINrec    +    sOFF     *     sDECH    ) + O
-#y1          =  C*  sDECH + O
+y           =  sON
+#y1          =  sOFF
+#y            =  C*                  sSINrec + O
+#y1           =  C*(    sON     *    sSINrec    +    sOFF     *     sDECH    ) + O
+#y1          =  C*  sSINrec + O
 
 
-plt.plot(x, y, y1)
+plt.plot(x, y) #, y1)
 plt.xlabel('sample(n)')
 plt.ylabel('voltage(V)')
 plt.show()
