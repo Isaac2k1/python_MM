@@ -24,12 +24,12 @@ x = np.arange(sample)
 #y = np.sin(2 * np.pi * f * x / Fs)
 
 sON     =  abs((0>np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B)) )
-sOFF    =  abs((0<np.sin(200*pi*x/Fs+A)) * (0<np.sin(200*pi*x/Fs+B)) )
+sOFF    =  abs((0<np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B)) )
 sSINrec =  abs(np.sin(100*pi* x/Fs ))
 sDECH   =  pp1* (np.arctan(np.tan(100*pi* x/Fs )) + pp2)
 
 # sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"        
-y            =  C* sSINrec + O
+y            =  C*                  sSINrec + O
 y1           =  C*(    sON     *    sSINrec    +    sOFF     *     sDECH    ) + O
 #y1          =  C*  sDECH + O
 
