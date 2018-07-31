@@ -3,6 +3,14 @@ import numpy as np
 from  math import*
 
 """
+
+sON     =  "abs(   (0>sin(200*pi*Ch(""t"")+A )) AND   (0>sin(200*pi*Ch(""t"")+B )))"
+sOFF    =  "abs(NOT(0>sin(200*pi*Ch(""t"")+A )) OR NOT(0>sin(200*pi*Ch(""t"")+B )))"
+sSINrec =  "abs(sin(100*pi*Ch(""t"")))"
+sDECH   = "pp1* (arctan(tan(100*pi*Ch(""t""))) + pp2)"
+
+ sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"
+
 Sub setDCI(iCurve,sSymbols,sValues,sUnit,Pts,t0,dt)
 '      sSymbols = array("Ampl" , "Start"     ,  "Stop"         , "pp1"     , "pp2"     , "sUnit", "O"   , "Pts", "t0", "dt")
        sSymbols = array("C"    , "A"         ,  "B"            , "pp1"     , "pp2"     , "sUnit", "O"   , "Pts", "t0", "dt")
