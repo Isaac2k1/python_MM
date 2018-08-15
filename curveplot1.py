@@ -31,7 +31,7 @@ f       = 100
 sample  = 20000
 x       = np.arange(sample)
 
-sON     = abs((0<np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B)) )
+sON     = (0<np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B))
 sOFF    = 1 - sON 
 sSINrec = abs(np.sin(100*pi* x/Fs ))
 sDECH   = pp1* (np.arctan(np.tan(100*pi* x/Fs )) + pp2)
@@ -39,7 +39,9 @@ sDECH   = pp1* (np.arctan(np.tan(100*pi* x/Fs )) + pp2)
 # sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"        
 y1      = C *   sSINrec                             + O 
 y2      = C *                   sDECH               + O 
-y3      = C * ( sSINrec * sON + sDECH * (1 - sON )) + O 
+#y3      = C * ( sSINrec * sON + sDECH * (1 - sON )) + O
+y3      = C * (sON*(sSINrec-sDECH) + sDECH) + O
+y3      = 
 
 plt.plot(x, y1, color='b')
 plt.plot(x, y2, color='g')
