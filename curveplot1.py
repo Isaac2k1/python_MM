@@ -41,7 +41,7 @@ y1      = C *   sSINrec                             + O
 y2      = C *                   sDECH               + O 
 #y3      = C * ( sSINrec * sON + sDECH * (1 - sON )) + O
 y3      = C * (sON*(sSINrec-sDECH) + sDECH) + O
-y3      = 
+#y3      = 
 
 plt.plot(x, y1, color='b')
 plt.plot(x, y2, color='g')
