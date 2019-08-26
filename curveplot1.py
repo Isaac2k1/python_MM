@@ -29,12 +29,12 @@ O = 0
 Fs      = 1000000
 f       = 100
 sample  = 20000
-x       = np.arange(sample)
+t       = np.arange(sample)
 
-sON     = (0<np.sin(200*pi*x/Fs+A)) * (0>np.sin(200*pi*x/Fs+B))
+sON     = (0<np.sin(200*pi*t/Fs+A)) * (0>np.sin(200*pi*t/Fs+B))
 sOFF    = 1 - sON 
-sSINrec = abs(np.sin(100*pi* x/Fs ))
-sDECH   = pp1* (np.arctan(np.tan(100*pi* x/Fs )) + pp2)
+sSINrec = abs(np.sin(100*pi* t/Fs ))
+sDECH   = pp1* (np.arctan(np.tan(100*pi* t/Fs )) + pp2)
 
 # sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"        
 y1      = C *   sSINrec                             + O 
@@ -43,9 +43,9 @@ y2      = C *                   sDECH               + O
 y3      = C * (sON*(sSINrec-sDECH) + sDECH) + O
 #y3      = 
 
-plt.plot(x, y1, color='b')
-plt.plot(x, y2, color='g')
-plt.plot(x, y3, color='r')
+plt.plot(t, y1, color='b')
+plt.plot(t, y2, color='g')
+plt.plot(t, y3, color='r')
 plt.xlabel('sample(n)')
 plt.ylabel('voltage(V)')
 plt.show()
