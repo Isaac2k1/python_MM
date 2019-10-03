@@ -1,8 +1,8 @@
 searchword="hangthewhitch"
 print('Your word has %d letters.' % len(searchword))
 foundword = '-' * len(searchword)   # create a string with filling characters
-contained_letters = set()
-found_letters = set()
+contained_letters = set()	# this is the set of all letters of searchword
+found_letters = set()	# this set contains all sucessfully guessed letters
 
 for i in searchword:                # collect all letters of searchword in a set
     contained_letters.update(i)
@@ -11,7 +11,6 @@ print(contained_letters)            # debug only, comment this line
 lives = len(contained_letters)      # minimum trials needed to not hung
 print('Totally {0:d} trials'.format(lives))
 
-
 while True:
     print('\nYou have {0:d} trials left.'.format(lives))
     inputchar = input("Guess a letter:")
@@ -19,11 +18,11 @@ while True:
     if inputchar in found_letters:
         print('DEJA VU!')       # letter has been entered before
         lives += 1              # do not punish player
-    else:                       # a new letter has been entered
-        for letter in searchword:    # check if letter is contained
+    else:                       # a new inputchar has been entered
+        for letter in searchword:    # check for inputchar in searchword
             print('check letter {0:s}'.format(letter))
             lives -= 1
-            if inputchar == letter:
+            if inputchar == letter:	# input is a new letter, store it in 
                 #print(inputchar, end='')
                 found_letters.update(inputchar)
                 print(found_letters)
