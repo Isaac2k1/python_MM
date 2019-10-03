@@ -15,6 +15,7 @@ while True:
     print('\nYou have {0:d} trials left.'.format(lives))
     inputchar = input("Guess a letter:")
     lives -= 1
+    inputchar = ''
     if inputchar in found_letters:
         print('DEJA VU!')       # letter has been entered before
         lives += 1              # do not punish player
@@ -31,8 +32,7 @@ while True:
                     print(letter, end='')
                 else:
                     print('-', end='')
-        
-    inputchar = ''
+
                 
                 
             
