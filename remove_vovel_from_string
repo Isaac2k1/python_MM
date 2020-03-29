@@ -1,0 +1,13 @@
+# remove vovels from word
+word = "Erdbeeren"
+result = ""
+vovel=['a','e','i','o','u']
+vovels="aeiou"
+
+for c in word:
+    if not c in vovels:
+        result = result + c
+
+print(result)
+
+# rdbrn
