@@ -49,6 +49,7 @@ data = list(input("enter your searchword:"))
 
 for lwords in range(len(data),1,-1):
 	print(lwords,"-letter words")
+	print(len(data),"-letter words")
 	all_permutations = set()
 	count = 0
 	for p in permutation(data):
