@@ -9,13 +9,13 @@ for i in searchword:                # collect all letters of searchword in a set
 # print(contained_letters)            # debug only, comment this line
 
 lives = len(contained_letters)      # minimum trials needed to not hung
-print('You got totally {0:d} trials'.format(lives))
+print('You got totally {0:d} trials.\n'.format(lives))
 
 while True:
     print('You have {0:d} trials left.'.format(lives))
     #inputchar = ''
     inputchar = input("Guess a letter:")
-    print('You entered: {}'.format(inputchar))
+    #print('You entered: {}'.format(inputchar))
     lives -= 1
     if inputchar in found_letters:
         print('DEJA VU LETTER {}!'.format(inputchar))       # letter has been entered before
@@ -38,12 +38,12 @@ while True:
     #print("  - minusse:{}".format(tofindletters))
 
     if tofindletters <=0:
-        print("You WIN with {} live(s) left!".format(lives))
+        print("\nYou WIN with {} live(s) left!".format(lives))
         break
 
     if lives <= 0:
-        print("YOU LOST!")
+        print("\nYOU LOST!")
         break
     else:
-        print("{} lives left".format(lives))
+        print("  {} lives left\n".format(lives))
 
