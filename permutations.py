@@ -1,4 +1,7 @@
 # Python function to print permutations of a given list
+# Ale: https://stackoverflow.com/questions/104420/how-to-generate-all-permutations-of-a-list/104436#104436
+#import itertools
+# list(itertools.permutations([1, 2, 3])
 def permutation(lst):
 
 	# If lst is empty then there are no permutations
@@ -44,6 +47,7 @@ def listToString(s):
 			
 	
 # Driver program to test above function
+import itertools
 data = list(input("enter your searchword:"))
 #print(data)
 
@@ -52,7 +56,8 @@ for lwords in range(len(data),1,-1):
 	print(len(data),"-letter words")
 	all_permutations = set()
 	count = 0
-	for p in permutation(data):
+	for p in itertools.permutations(data):
+	#for p in permutation(data):
 		count +=1
 		strg=listToString(p)
 		all_permutations.update({strg[0:lwords]})
@@ -64,3 +69,37 @@ for lwords in range(len(data),1,-1):
 	print("Permutations: ",count)
 
 
+# Ale's refactor from 2020-03-29 18h22
+def generate_words(data):
+    for lwords in range(len(data), 1, -1):
+        print(lwords, "-letter words")
+        print(len(data), "-letter words")
+        all_permutations = set()
+        count = 0
+        for p in permutation(data):
+            count += 1
+            strg = listToString(p)
+            all_permutations.update({strg[0:lwords]})
+        #print(all_permutations)
+        all_permutations = sorted(all_permutations)
+        for word in all_permutations:
+            print(word)
+        print(len(all_permutations), " of ", count)
+        print("Permutations: ", count)
+ 
+# Driver program to test above function
+data = list(input("enter your searchword:"))
+generate_words(data)
+
+# ----
+# Ale's refactor from 2020-03-29 19h01
+import itertools
+
+def generate_words(data):
+    for i in range(len(data), 1, -1):
+        permutations = [''.join(p) for p in itertools.permutations(data, i)]
+        print(permutations)
+
+# data = input("enter your searchword:")
+# generate_words(data)
+generate_words('casa')
