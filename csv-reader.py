@@ -13,12 +13,12 @@ def write(file_location, rows):
             writer.writerow(row)
 
 def raw_test():
-    columns = int(raw_input("How many columns do you want to write? "))
+    columns = int(input("How many columns do you want to write? "))
     input_rows = []
     keep_going = True
     while keep_going:
-        input_rows.append([raw_input("column {}: ".format(i + 1)) for i in range(0, columns)])
-        ui_keep_going = raw_input("continue? (y/N): ")
+        input_rows.append([input("column {}: ".format(i + 1)) for i in range(0, columns)])
+        ui_keep_going = input("continue? (y/N): ")
         if ui_keep_going != "y":
             keep_going = False
 
