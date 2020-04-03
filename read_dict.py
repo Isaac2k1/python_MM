@@ -1,5 +1,6 @@
 # path to word list in MacOS: /usr/share/dict/web2
-ObjRead = open("/usr/share/dict/web2", "r")
+#ObjRead = open("/usr/share/dict/web2", "r")
+ObjRead = open("web2.txt", "r")
 
 # txtContent = ObjRead.read();
 # 
@@ -16,7 +17,8 @@ ObjRead = open("/usr/share/dict/web2", "r")
 # 
 
 variables = dict()
-with open('/usr/share/dict/web2', 'r') as textfile:
+#with open('/usr/share/dict/web2', 'r') as textfile:
+with open('web2.txt', 'r') as textfile:
     while True:    
         next_line = textfile.readline()
         print(next_line,len(next_line))
