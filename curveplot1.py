@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #runs in Python 3.7.4 on MacOS
 # curveplot1.py
 import matplotlib.pyplot as plt
@@ -32,16 +33,16 @@ sample  = 20000
 t       = np.arange(sample)
 
 sON     = (0<np.sin(200*pi*t/Fs+A)) * (0>np.sin(200*pi*t/Fs+B))
-sOFF    = 1 - sON 
+sOFF    = 1 - sON
 sSINrec = abs(np.sin(100*pi* t/Fs ))
 sDECH   = pp1* (np.arctan(np.tan(100*pi* t/Fs )) + pp2)
 
-# sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"        
-y1      = C *   sSINrec                             + O 
-y2      = C *                   sDECH               + O 
+# sFormula1 = "C*(" & sON  & "*" & sSINrec & "+" & sOFF & " * " & sDECH & ") + O"
+y1      = C *   sSINrec                             + O
+y2      = C *                   sDECH               + O
 #y3      = C * ( sSINrec * sON + sDECH * (1 - sON )) + O
 y3      = C * (sON*(sSINrec-sDECH) + sDECH) + O
-#y3      = 
+#y3      =
 
 plt.plot(t, y1, color='b')
 plt.plot(t, y2, color='g')
