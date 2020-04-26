@@ -1,4 +1,4 @@
-inp="314"
+inp=input("Enter a number to calculate queersum: ")
 qsum=0
 for i in inp:
     qsum += int(i)
