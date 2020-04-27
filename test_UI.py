@@ -1,5 +1,5 @@
 import ui
-
+print(dir(ui))
 def button_tapped(sender):
     sender.title = 'Hello'
 
