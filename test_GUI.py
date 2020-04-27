@@ -2,7 +2,6 @@
 """
 Hello World, but with more meat.
 """
-
 import wx
 
 class HelloFrame(wx.Frame):
