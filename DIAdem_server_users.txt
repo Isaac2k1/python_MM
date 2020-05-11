@@ -18,6 +18,7 @@ chbrrad
 chchkol1
 chdamor
 chdaove
+chdebae
 chelstr
 chempan
 cheszim
@@ -54,7 +55,7 @@ chminag1
 chmipal
 chmisch10
 chmista1
-chnamah
+chnamah Navid Mahdizadeh
 chnijel
 chniran
 cholcos
@@ -69,9 +70,9 @@ chreneu
 chrigao
 chrihir
 chrirap
-chroste3
+chroste3 Roman Steinemann
 chrovos1
-chsakot
+chsakot Sami Kotilainen
 chsasar1
 chsepar
 chstarn1
@@ -80,23 +81,25 @@ chstkal
 chstlae
 chthbai
 chthkuh1
-chulstr
+chulstr Ulrich Straumann
 chvatep
 chvidou
 chwagas
-demasch17
-deu106132
-deu106151
-deu106243
-deu116500
-deu116699
-deu116726
-deu116746
-deu131563
-deu214356
-deu218500
+demasch17 matthias schmidt
+deu106132 thomas brenneis
+deu106151 hauke peters
+deu106243 bernd brüggemann
+deu116500 martin stanko
+deu116699 uwe przybille
+deu116726 eugen graf
+deu116746 thomas klose
+deu131563 tobias schiller
+deu214356 wasim albitar
+deu218500 martin danz
 itenerr
 itlosco
 itnaama
 itsarom1
 sejoegu
+deu106141 thomas HD braun
+chcosch2
