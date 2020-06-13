@@ -1,0 +1,46 @@
+ 10
+Date            2020-04-29
+ 8
+Time            19:29:31
+ 32
+campaign        2020-L-031_20200429_DI_IAF1_ELK3
+ 3
+product group   elk
+ 10
+TNS_campaign    2020-L-031
+ 4
+Owner           Kalt
+ 7
+PEHLA           20073Ba
+ 12
+Client          M. Kleimaier
+ 13
+X-number        X-20190019-HP
+ 5
+Testobject      ELK-3
+ 3
+Lab_Kuerzel     l  
+ 14
+Lab_Name        l Hochleistung
+ 4
+Test engineer   Kalt
+ 3
+Test_Type       NLT
+ 11
+Test_Subtype    NLT_MINIMAL
+ 3
+Test_Uod        0  
+ 3
+Test_Ucd        0  
+ 5
+Title           ELK-3
+ 3
+Comment         IAF
+ 8
+Request         P. Meier
+ 15
+Reference       X-2019019-HP-01
+ 13
+Saturn Studio II2.0.1704.5253
+ 8
+Saturn Server   V1.9a507
