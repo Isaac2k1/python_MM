@@ -1,9 +1,12 @@
 from turtle import *
-#from definitionen import *
+from definitionen import *
+from random import *
+
+segmente = []
 
 kopf = Turtle()
-kopf.shape("square")
 kopf.color("black")
+kopf.shape("square")
 kopf.penup()
 kopf.speed(0)
 kopf.goto(0, 0)
@@ -46,6 +49,14 @@ oben.right(270)
 oben.penup()
 oben.speed(0)
 oben.goto(160, -140)
+
+neues_segment = Turtle()
+neues_segment.shape("square")
+neues_segment.color("yellow")
+neues_segment.penup()
+neues_segment.speed(0)
+neues_segment.goto(170, -170)
+
 
 halt = input("?")
 
@@ -96,4 +107,29 @@ def kopf_bewegen():
         x = kopf.xcor()
         kopf.setx(x - 20)
 
-halt = input("?")
+def checke_kollision_mit_essen():
+    if kopf.distance(essen) < 20:
+        # essen an neue Position kopf_bewegen
+        # Schlange wachsen lassen
+
+def checke_kollision_mit_fensterrand():
+    if kopf.xcor() < -190 or kopf.xcor() > 190 or
+       kopf.ycor() < -190 or kopf.ycor() > 190:
+        spiel_neustarten()
+        # Kopf in der Mitte platzieren
+        # Richtung auf "stop" setzen
+        segmente_entfernen()
+        # Ausgabe, dass Spielrunde vorbei ist
+
+def checke_kollision_mit_segmenten():
+    for segment in segmente:
+        if segment.distance(kopf) < 20:
+            spiel_neustarten()
+
+def koerper_bewegen():
+    for index in range(len(segmente) - 1, 0, -1):
+        # bewege segmente(index) an segmente(index - 1)
+
+    # überprüfe, ob die Schlange nicht nur aus Kopf besteht
+        # Wenn, dann bewege erstes Segment zum Kopf
+        
