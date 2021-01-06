@@ -111,6 +111,7 @@ def checke_kollision_mit_essen():
     if kopf.distance(essen) < 20:
         # essen an neue Position kopf_bewegen
         # Schlange wachsen lassen
+        hugo = hugo
 
 def checke_kollision_mit_fensterrand():
     if kopf.xcor() < -190 or kopf.xcor() > 190 or
@@ -132,4 +133,10 @@ def koerper_bewegen():
 
     # überprüfe, ob die Schlange nicht nur aus Kopf besteht
         # Wenn, dann bewege erstes Segment zum Kopf
-        
+
+def wiederhole_spiellogik():
+    checke_kollision_mit_essen()
+    checke_kollision_mit_fensterrand()
+    koerper_bewegen()
+    kopf_bewegen()
+    checke_kollision_mit_segmenten()
