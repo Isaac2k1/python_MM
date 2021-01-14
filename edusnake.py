@@ -1,3 +1,4 @@
+# https://www.edureka.co/blog/python-turtle-module/#FunctionsToMoveTheSnake
 import turtle
 import time
 delay = 0.3
