@@ -3,6 +3,11 @@
 import itertools
 # list(itertools.permutations([1, 2, 3])
 
+def analyse(next_line):
+    willi = next_line.split(",")
+    print(willi)
+    return(willi)
+
 def permutation(lst):
 	# If lst is empty then there are no permutations
 	if len(lst) == 0:
@@ -45,7 +50,7 @@ def listToString(s):
 	# return string 
 	return str1 
 
-
+'''
 for lwords in range(len(data),1,-1):
 	print(lwords,"-letter words")
 	print(len(data),"-letter words")
@@ -62,3 +67,4 @@ for lwords in range(len(data),1,-1):
 		print(word)
 	print(len(all_permutations)," of ",count)
 	print("Permutations: ",count)
+'''
