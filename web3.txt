@@ -1,0 +1,54 @@
+der,die,das 0 DET
+in 2
+und 2
+sein 3 V
+ein(e) 3 DET
+werden 3
+von 3
+mit 3
+der,die,das 3 PRON
+haben 3
+im 4
+für 4
+sich 4
+auf 4
+zu 4 PREP
+an 4 PREP
+nicht 4
+es 4
+auch 4
+er 4
+als 4
+zu 4 CONJ
+bei 4
+sein 4 PRON
+sie 5
+dies(e,er,es) 5
+ein(e) 5 PRON
+können 5
+nach 5 PREP
+dass 5
+ihr 5
+zu 5 ADV
+aus 5
+Jahr 5
+ich 5
+so 5
+noch 5 ADV
+zum 5
+alle 5
+wir 5
+ein(e) 5 NUM
+nur 5
+über 6
+am 6
+sollen 6
+oder 6
+vor 6 PREP
+müssen 6
+Uhr 6
+geben 6
+zur 6
+neu 6
+man 6
+kein(e,er,es) 6
