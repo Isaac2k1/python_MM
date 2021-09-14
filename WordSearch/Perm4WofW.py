@@ -75,3 +75,5 @@ print("There is", len(found_words), "words in the German dictionary.")
 found_words.sort()
 for word in found_words:
     print(word)
+
+print("Ferdisch!")
