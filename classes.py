@@ -23,7 +23,7 @@ def distance_between_two_points(p,q):
     
 
 s = distance_between_two_points(blank,hugo)
-print(s)
+print("distance between Hugo and Blank: ", s)
 
 #----
 
@@ -41,14 +41,17 @@ class Triangle:
         return perimeter
         
     def area(self):
-        s = (s*(s-self.a)*(s-self.b)*(s-self.c))**0.5
+        s = Triangle.perimeter(self) / 2
+        area = (s*(s-self.a)*(s-self.b)*(s-self.c))**0.5
         return area
 
-willi = Triangle()
+willi = Triangle(3, 4, 5)
 
 willi.a = 3.0
-willi.b = 4.0
-willi.c = 5.0
+willi.b = 3.0
+willi.c = 3.0
 
-s = Triangle.perimeter(willi)
-print(s)
+
+print('Umfang: ',Triangle.perimeter(willi))
+print('Fläche: ',Triangle.area(willi))
+
