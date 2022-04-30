@@ -46,12 +46,12 @@ class Triangle:
         return area
 
 willi = Triangle(3, 4, 5)
-
-willi.a = 3.0
-willi.b = 3.0
+print(dir())
+willi.a = 4.0
 willi.c = 3.0
+willi.b = 5.0
 
-
+print(dir())
 print('Umfang: ',Triangle.perimeter(willi))
 print('Fläche: ',Triangle.area(willi))
 
