@@ -83,7 +83,7 @@ def length_sort(foundwords, displayarray, colindexes, maxwords):
     return foundwords, displayarray, colindexes, maxwords
 
 # === MAIN PROGRAM ===
-data = "indexs" # input("enter your searchword:")
+data = "eismann" # input("enter your searchword:")
 
 permutations = generate_words(data.upper())
 print("The string", data, "has", len(permutations), "unique combinations.")
