@@ -43,7 +43,8 @@ def generate_words(data):
     return permutations
 
 # === MAIN PROGRAM ===
-ObjRead = open("DeReWo.txt", "r")
+ObjRead = open("./WordSearcDeReWo.txt", "r")
+#ObjRead = open("DeReWo.txt", "r")
 print("start reformatting of wordlist...")
 words = 0
 with ObjRead as textfile:
