@@ -98,7 +98,7 @@ import itertools
 def generate_words(data):
     for i in range(len(data), 1, -1):
         permutations = [''.join(p) for p in itertools.permutations(data, i)]
-        print(permutations)
+#        print(permutations)
 
 # data = input("enter your searchword:")
 # generate_words(data)
