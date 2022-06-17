@@ -1,9 +1,10 @@
 ﻿# --------------------------------------------------------------------
 # -- Python Script File
 # -- Created on 2022-04-28 16:49:49
-# -- Author: username
+# -- Author: Marco Mailand
 # -- Comment: analysing the group names much better
 # --------------------------------------------------------------------
+# Path to data: I:\HG\Lab\07 ELLAB\PROJEKTE\117-xx_(Ladesteuerung_C3)\Highvolt_DC450kV\11_Problematik_Einschaltstrom\processing_software
 import sys
 if 'DIAdem' in sys.modules:
     from DIAdem import Application as dd
